@@ -27,7 +27,7 @@ def do_deploy(archive_path):
     remote_path = "/data/web_static/releases/{}".format(filename)
     c2 = sudo("mkdir -p {}".format(remote_path)).succeeded
     c3 = sudo("tar -xzf /tmp/{} -C {}".format(filename, remote_path)).succeeded
-    c4 = sudo("mv {0}/web_static/* {0}".format(remote_path))
+    c4 = sudo("mv {0}/web_static/* {0}".format(remote_path)).succeeded
     c5 = sudo("rm -rf /tmp/{} {}/web_static".format(filename,
                                                     remote_path)).succeeded
     link = "/data/web_static/current"
