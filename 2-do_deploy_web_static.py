@@ -33,5 +33,6 @@ def do_deploy(archive_path):
     link = "/data/web_static/current"
     c6 = sudo("ln -snf {} {}".format(remote_path, link)).succeeded
     if c1 and c2 and c3 and c4 and c5 and c6:
+        print("New version deployed!")
         return (True)
     return (False)
