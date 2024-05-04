@@ -26,7 +26,7 @@ def do_pack():
     local("mkdir -p versions")
     ar_name = "versions/web_static_{}.tgz".format(now)
     result = local("tar -cvzf {} ./web_static".format(ar_name))
-    if os.path.exists:
+    if os.path.exists(ar_name):
         return (ar_name)
     return (None)
 
