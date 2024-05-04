@@ -20,7 +20,7 @@ def do_deploy(archive_path):
     """
     Fabfile to deploy archive to remote web server
     """
-    if not os.path.exists(archive_path):
+    if not (archive_path and os.path.exists(archive_path)):
         return (False)
     filename = ".".join(archive_path.split("/")[-1].split(".")[0:-1])
     c1 = put(archive_path, "/tmp/{}".format(filename), use_sudo=True).succeeded
