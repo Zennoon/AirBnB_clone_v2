@@ -55,7 +55,7 @@ def python_path(text="is cool"):
     Route function for urls matching '/python/<text>'
 
     Args:
-        text (str): path following '/python/' in the url, 
+        text (str): path following '/python/' in the url,
                     default value='is cool'
     """
     return ("Python {}".format(text.replace('_', ' ')))
