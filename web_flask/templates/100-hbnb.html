@@ -48,6 +48,7 @@
         {% for place in all_places %}
         <ARTICLE>
             <DIV class="headline">
+                <DIV class="place_holder"></DIV>
                 <H2>{{ place.name }}</H2>
                 <DIV class="price_by_night">${{ place.price_by_night }}</DIV>
             </DIV>
@@ -58,7 +59,7 @@
                 </DIV>
                 <DIV class="number_rooms">
                     <DIV class="bed_icon place_icon"><IMG src={{ url_for("static", filename="images/icon_bed.png") }}/></DIV>
-                    <P>{{ place.number_bedrooms }} Bedroom</P>
+                    <P>{{ place.number_rooms }} Bedroom</P>
                 </DIV>
                  <DIV class="number_bathrooms">
                     <DIV class="bath_icon place_icon"><IMG src={{ url_for("static", filename="images/icon_bath.png") }}/></DIV>
