@@ -98,3 +98,9 @@ class DBStorage():
         """Drops all tables in existing in the session."""
         Base = declarative_base()
         Base.metadata.drop_all(bind=self.__engine)
+
+    def close(self):
+        """
+        Updates the session to reflect recently made transactions
+        """
+        self.__session.remove()

@@ -90,3 +90,10 @@ class FileStorage:
             key = "{}.{}".format(obj.__class__.__name__, obj.id)
             if FileStorage.__objects.get(key) is not None:
                 del FileStorage.__objects[key]
+
+    def close(self):
+        """
+        Update our __objects to reflect all the recently made transactions,
+        and newly saved objects
+        """
+        self.reload()

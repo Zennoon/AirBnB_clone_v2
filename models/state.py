@@ -35,7 +35,3 @@ class State(BaseModel, Base):
             """
             return [city for city in storage.all(City).values()
                     if city.state_id == self.id]
-
-        @cities.setter
-        def cities(self, obj):
-            self.cities = None
