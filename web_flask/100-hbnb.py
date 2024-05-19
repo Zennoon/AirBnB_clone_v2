@@ -18,8 +18,7 @@ from models.place import Place
 from models.state import State
 
 
-app = Flask("__name__", template_folder="./web_flask/templates",
-            static_folder="./web_flask/static")
+app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
