@@ -25,6 +25,7 @@ def home():
     """Route function for the '/' url"""
     return ("Hello HBNB!")
 
+
 @app.route('/hbnb')
 def hbnb():
     """Route function for the '/hbnb' url"""

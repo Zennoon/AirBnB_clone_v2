@@ -27,10 +27,12 @@ def home():
     """Route function for the '/' url"""
     return ("Hello HBNB!")
 
+
 @app.route('/hbnb')
 def hbnb():
     """Route function for the '/hbnb' url"""
     return ("HBNB")
+
 
 @app.route('/c/<text>')
 def c_path(text):
@@ -42,6 +44,7 @@ def c_path(text):
 
     """
     return (f"C {text.replace('_', ' ')}")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
