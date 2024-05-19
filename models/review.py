@@ -3,7 +3,7 @@
 contains
 
 classes:
-    Review - represents a review left by a user, mapped to the reviews table 
+    Review - represents a review left by a user, mapped to the reviews table
     in the database
 """
 from models.base_model import BaseModel, Base

@@ -3,7 +3,7 @@
 contains
 
 classes:
-    Amenity - represents an amenity of a place, mapped to the amenities table 
+    Amenity - represents an amenity of a place, mapped to the amenities table
     in the database
 """
 from models.base_model import BaseModel, Base

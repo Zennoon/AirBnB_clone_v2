@@ -3,7 +3,7 @@
 contains
 
 classes:
-    Place - Represents a real-life place (to be rented), mapped to the places 
+    Place - Represents a real-life place (to be rented), mapped to the places
     table in the database
 """
 import os
@@ -51,7 +51,6 @@ class Place(BaseModel, Base):
             """Getter property for the reviews attribute."""
             reviews = [review for review in storage.all(Review)
                        if review.place_id == self.id]
-
 
         @property
         def amenities(self):

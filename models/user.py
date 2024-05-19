@@ -3,7 +3,7 @@
 contains
 
 classes:
-    User - Inherits from BaseModel, represents a user, mapped to the users table
+    User - Inherits from BaseModel, represents user, mapped to the users table
     in the database
 """
 from models.base_model import BaseModel, Base

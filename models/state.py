@@ -3,7 +3,7 @@
 contains
 
 classes:
-    State - Inherits from BaseModel, represents a real-life state, mapped to the
+    State - Inherits from BaseModel, represents real-life state, mapped to the
     states table in the database
 """
 import os

@@ -45,7 +45,6 @@ class DBStorage():
         from models.state import State
         from models.user import User
 
-
         classes = [Amenity, City, Place, Review, State, User]
 
         objs = []
@@ -87,7 +86,6 @@ class DBStorage():
         from models.review import Review
         from models.state import State
         from models.user import User
-
 
         if os.getenv("HBNB_ENV") == "test":
             Base.metadata.drop_all(bind=self.__engine)
