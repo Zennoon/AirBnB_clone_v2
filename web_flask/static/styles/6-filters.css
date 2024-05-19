@@ -34,6 +34,7 @@
 	background-color: #FAFAFA;
 	width: 100%;
 	max-height: 300px;
+	position: relative;
 
 	margin-left: -1px;
 	margin-top: 8px;
@@ -48,10 +49,12 @@
 
 .locations:hover .popover {
 	display: inline-block;
+	z-index: 100;
 }
 
 .filter_amenities:hover .popover {
 	display: inline-block;
+	z-index: 100;
 }
 
 ul {
