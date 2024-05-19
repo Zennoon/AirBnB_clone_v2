@@ -6,7 +6,7 @@ Implementationof the database storage engine
 
 """
 import os
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, scoped_session, sessionmaker
 
 
@@ -25,13 +25,6 @@ class DBStorage():
                            os.getenv("HBNB_MYSQL_HOST"),
                            os.getenv("HBNB_MYSQL_DB"))
         self.__engine = create_engine(conn, pool_pre_ping=True)
-        db = os.getenv("HBNB_MYSQL_DB")
-        with self.__engine.connect() as connection:
-            command = "CREATE DATABASE IF NOT EXISTS {}"
-            connection.execute(text(command.format(db)))
-            command = "ALTER DATABASE {} CHARSET latin1"
-            connection.execute(text(command.format(db)))
-            connection.commit()
         if os.getenv("HBNB_ENV") == "test":
             self.drop_all_tables()
 
